@@ -1,0 +1,38 @@
+{
+  "name": "xr-impl-bjs",
+  "version": "1.0.26",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "scripts": {
+    "ci": "prettier --check src && tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.build.json -outDir dist",
+    "release": "npm run ci && npm run build && release-it"
+  },
+  "devDependencies": {
+    "@babylonjs/gui": "^6.8.0",
+    "@types/howler": "^2.2.7",
+    "xr-core": "^1.0.24",
+    "apng-js": "^1.1.1",
+    "recast-detour": "^1.6.2",
+    "prettier": "^3.0.2",
+    "typescript": "^5.1.6",
+    "release-it": "^16.1.5"
+  },
+  "peerDependencies": {
+    "xr-core": "^1.0.23"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^6.8.0",
+    "@babylonjs/inspector": "^6.8.0",
+    "@babylonjs/loaders": "^6.8.0",
+    "@babylonjs/materials": "^6.8.0",
+    "ah-event-bus": "^4.0.14",
+    "ah-flow-node": "^2.1.1",
+    "ah-logger": "^3.2.8",
+    "ah-memory-fs": "^1.0.17",
+    "babylonjs-ktx2decoder": "^6.8.0"
+  }
+}
