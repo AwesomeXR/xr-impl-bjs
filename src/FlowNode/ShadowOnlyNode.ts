@@ -12,8 +12,9 @@ export const getShadowOnlyNodeRegisterData = (): IFlowNodeTypeRegisterData<'Shad
 
       const applyMesh = ctx.input.applyMesh as Mesh;
       applyMesh.material = mat;
-
       applyMesh.visibility = 0.9; // for CascadedShadowGenerator
+
+      ctx.output.loaded = true;
     }
 
     const flusher = Util.createNodeFlusher(ctx, {
